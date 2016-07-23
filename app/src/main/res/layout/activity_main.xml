@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0000ff">
+    <ImageView
+        android:id="@+id/view_shot"
+        android:layout_width="70dp"
+        android:layout_height="70dp" />
+    <!--拼图区域-->
+    <RelativeLayout
+        android:id="@+id/puzzle_area"
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:layout_above="@+id/hs"
+        android:layout_marginBottom="40dp"
+        android:layout_centerInParent="true"
+        android:background="@android:color/white">
+
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/hs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <GridView
+                android:id="@+id/gv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></GridView>
+        </LinearLayout>
+    </HorizontalScrollView>
+</RelativeLayout>
